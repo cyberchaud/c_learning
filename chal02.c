@@ -5,8 +5,8 @@ int main() {
     float b = 3.1416;
     char c[] = "Hello, world!";
 
-    printf("%a is a integer!", a);
-    printf("%b is a float!", b);
-    printf("%c is a string!", c);
+    printf("%d is an integer!\n", a);
+    printf("%f is a float!\n", b);
+    printf("%s is a char!\n", c);
 
 }

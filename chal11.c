@@ -1,28 +1,26 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(void) {
 
-int scores[10], i = 0, score, sum;
-double avgscores;
-char answer[0];
+int i = 0, score, scores = 0;
+float avgscores;
+char answer[] = "y";
 
-while (sizeof(scores) / sizeof(scores[0]) < 9) {
+while (strcmp(answer, "y") == 0) {
     
     printf("Enter a test score:");
     scanf("%d", &score);
-    sum = sum + score;
-    avgscores = sum / (sizeof(scores) / sizeof(scores[0]));
+printf("%d", score);
+    scores += score;
+    i++;
     printf("Would you like to continue? Y/N");
     scanf("%s", &answer);
 
-    if (answer != "Y") {
-        break;
-    } else {
-        //i++;
-    }
-
 }
 
-printf("The average score is: %f", avgscores);
+printf("scores: %d i: %d\n", scores, i);
+avgscores = scores / i;
+printf("The average score is: %.2f", avgscores);
 
 }

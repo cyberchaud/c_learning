@@ -21,5 +21,5 @@ else if (number > 200) {
 else if (number > 100) {
     printf("Your number is between 101 and 200.\n");
 }
-else {printf("Your number is between 101 and 200.\n");}
+else {printf("Your number is between 1 and 100.\n");}
 }

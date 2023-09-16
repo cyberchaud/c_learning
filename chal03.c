@@ -6,10 +6,10 @@ int main(void) {
     char lname[20];
 
     printf("Type in your first name: \n");
-    scanf("%d", &fname);
+    scanf("%s", &fname);
     printf("Type in your last name: \n");
-    scanf("%d", &lname);
+    scanf("%s", &lname);
 
-    printf("Your full name is: %d %d", fname, lname);
+    printf("Your full name is: %s %s", fname, lname);
 
 }
