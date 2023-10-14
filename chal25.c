@@ -18,6 +18,32 @@ int main (void) {
         
     }
 
-    write(filedescriptor, "Writing test date to the file.", 30);
+    int writertn;
+
+    writertn = write(filedescriptor, "Writing test date to the file.\n", 30);
+    
+    if (writertn != 30)
+    {
+        printf("[!] The write operation failed...\n");
+        return -1;
+    }
+    else
+    {
+        printf("[-] The write operation succeeded!\n");
+    }
+
+    int closertn;
+
+    closertn = close(filedescriptor);
+
+    if (closertn != 0) {
+        printf("[!] The file could not be closed...\n");
+        return -1;
+    }
+    else
+    {
+        printf("[-] The close operation succeeded!\n");
+    }
+
     return 0;
 }
